@@ -35,7 +35,7 @@
 			/**
 			 * If a store, add cart icon
 			 */
-			if (strtolower(get_bloginfo('description')) === 'store') : ?>
+			if (strtolower(get_bloginfo('description')) === 'store') :
 		?>
 			<?php
 				// Get number of items in cart
