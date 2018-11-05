@@ -16,7 +16,11 @@ get_header(); ?>
 	?>
 		<?php
 			// Insert the post content
-			get_template_part( 'content', get_post_type() );
+			if (is_single() && get_post_type() === 'product') {
+				get_template_part( 'content', 'wc-product' );
+			} else {
+				get_template_part( 'content', get_post_type() );
+			}
 		?>
 	<?php endwhile; ?>
 
