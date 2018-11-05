@@ -77,7 +77,7 @@
 		if (strtolower(get_bloginfo('description')) !== 'store') return;
 	    add_theme_support( 'woocommerce' );
 	}
-	add_action( 'after_setup_theme', 'keel_woocommerce_support' );
+	// add_action( 'after_setup_theme', 'keel_woocommerce_support' );
 
 
 
