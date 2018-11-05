@@ -53,8 +53,9 @@
 		if ( is_feed() )
 			return $title;
 
-		if ( is_front_page() )
-			$title = 'Donate ' . $sep . ' ';
+		if ( is_front_page() ) {
+		 	$title = get_bloginfo('description') . ' ' . $sep . ' ';
+		}
 
 		// Add the site name
 		$title .= get_bloginfo( 'name' );
