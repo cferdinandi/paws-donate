@@ -36,17 +36,6 @@
 			/**
 			 * If a store, add cart icon
 			 */
-			if ($site_type === 'store') {
-				echo file_get_contents(realpath(ABSPATH . DIRECTORY_SEPARATOR . '..') . '/partials/subnav.html');
-			}
-		?>
-
-
-
-		<?php
-			/**
-			 * If a store, add cart icon
-			 */
 			if ($site_type === 'store') :
 		?>
 			<?php
