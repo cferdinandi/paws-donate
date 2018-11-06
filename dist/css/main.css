@@ -1,5 +1,5 @@
 /*!
- * paws-donate v1.6.0: Donate to PAWS New England
+ * paws-donate v1.7.0: Donate to PAWS New England
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * https://github.com/pawsnewengland/paws-donate

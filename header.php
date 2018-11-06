@@ -25,6 +25,7 @@
 		// Get page layout options
 		global $post;
 		$page_navs = get_post_meta( $post->ID, 'keel_page_navs', true );
+		$site_type = strtolower(get_bloginfo('description'))
 	?>
 
 	<body <?php body_class($class = 'pne-' . strtolower(get_bloginfo('description'))); ?>>
@@ -35,7 +36,18 @@
 			/**
 			 * If a store, add cart icon
 			 */
-			if (strtolower(get_bloginfo('description')) === 'store') :
+			if ($site_type === 'store') {
+				echo file_get_contents(realpath(ABSPATH . DIRECTORY_SEPARATOR . '..') . '/partials/subnav.html');
+			}
+		?>
+
+
+
+		<?php
+			/**
+			 * If a store, add cart icon
+			 */
+			if ($site_type === 'store') :
 		?>
 			<?php
 				// Get number of items in cart
