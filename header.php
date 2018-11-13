@@ -45,7 +45,9 @@
 			<div class="bg-muted padding-top-small padding-bottom-small margin-bottom-large">
 				<div class="container container-large nav-menu-subnav" id="nav-menu-subnav">
 					<ul class="list-inline no-margin-bottom">
-						<li><a class="float-left" href="<?php echo site_url(); ?>/">&larr; All Products</a></li>
+						<?php if (!is_front_page()): ?>
+							<li><a class="float-left" href="<?php echo site_url(); ?>/">&larr; All Products</a></li>
+						<?php endif; ?>
 						<li class="float-right">
 							<a href="<?php echo wc_get_cart_url(); ?>">
 								<svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 17 17"><title>Your Cart</title><path fill="currentColor" d="M6.375 15.406c0 .88-.714 1.594-1.594 1.594s-1.593-.714-1.593-1.594c0-.88.714-1.594 1.594-1.594s1.595.714 1.595 1.594zM17 15.406c0 .88-.714 1.594-1.594 1.594s-1.594-.714-1.594-1.594c0-.88.714-1.594 1.594-1.594S17 14.526 17 15.406zM17 8.5V2.125H4.25c0-.587-.476-1.063-1.063-1.063H0v1.063h2.124l.798 6.84c-.486.39-.798.99-.798 1.66 0 1.174.95 2.125 2.125 2.125H17v-1.063H4.25c-.588 0-1.064-.476-1.064-1.063v-.01l13.812-2.115z"/></svg>
